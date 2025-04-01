@@ -32,7 +32,7 @@ const User = sequelize.define('User', {
   });
   
   // Sync the models and create tables
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ alter: true }).then(() => {
   console.log('Tables created successfully!');
 }).catch((err) => {
   console.error('Error syncing database:', err);
